@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Timer.TimerPage"
+             Title="TimerPage">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Entry x:Name="myEntry" Text="【タスク1】経過時間" FontFamily="Meiryo UI" FontSize="32"/>
+
+            <Label Text="00:00:00"
+                FontSize="36"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                x:Name="label1"/>
+
+
+            <Button
+                x:Name="StartBtn"
+                Text="計測スタート"
+                Clicked="OnStart"
+
+                HorizontalOptions="Center" />
+           
+            <Button
+                x:Name="StopBtn"
+                Text="計測ストップ"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="btnStop"
+
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="ResetBtn"
+                Text="リセット"
+                Clicked="btnReset"
+                HorizontalOptions="Center" />
+
+            <Entry x:Name="myEntry2" Text="【タスク2】経過時間" FontFamily="Meiryo UI" FontSize="32" />
+
+
+
+            <Label Text="00:00:00"
+                FontSize="36"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                x:Name="label2"/>
+
+
+            <Button
+                x:Name="Start2Btn"
+                Text="計測スタート"
+                Clicked="OnStart2"
+
+                HorizontalOptions="Center" />
+           
+            <Button
+                x:Name="Stop2Btn"
+                Text="計測ストップ"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="btnStop2"
+
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="Reset2Btn"
+                Text="リセット"
+                Clicked="btnReset2"
+                HorizontalOptions="Center" />
+
+            <!--<Label
+                Text="ストップウォッチNo.3"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CounterBtn3"
+                Text="計測スタート"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />-->
+            
+</VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
